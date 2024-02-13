@@ -1,0 +1,22 @@
+<PhotoView>:
+    FloatLayout:
+        Image:
+            source: "main.png"
+        Camera:
+            id:camera
+            play:True
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+        Button:
+            text:"capture"
+            font_size: 30
+            on_release:root.take_photo()
+            size_hint: .1,.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        Label:
+            id: counter_label
+            text: ""
+            font_size: 160
+            color: 1, 1, 1, 1
+            size_hint: None, None
+            size: self.texture_size
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
